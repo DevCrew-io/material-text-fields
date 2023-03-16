@@ -1,6 +1,19 @@
 import 'package:flutter/material.dart';
 
+/// This class is used to define the value of inputDecorationTheme
 class MaterialTextFieldTheme {
+  /// [hintStyle] for hint text styling
+  /// [fillColor] for background color of text field
+  /// [contentPadding] padding for the input decoration's container
+  /// [errorStyle] style to use for the error message
+  /// [floatingLabelStyle] for floating label text styling
+  /// [width] for border width
+  /// [enabledColor] color to use for enabled border
+  /// [focusedColor] color to use for focused border
+  /// [prefixIconColor] color to use for prefixIcon
+  /// [suffixIconColor] color to use for suffixIcon
+
+  /// This function is used for the theming of underlined text field
   static InputDecorationTheme borderlessTextTheme({
     TextStyle? hintStyle,
     Color fillColor = Colors.transparent,
@@ -35,6 +48,10 @@ class MaterialTextFieldTheme {
     );
   }
 
+  /// [radius] corner radius of field
+  /// [labelStyle] for label text styling
+
+  /// This function is used for the theming of filled or outlined text field
   static InputDecorationTheme filledOrOutlinedTextTheme({
     TextStyle? hintStyle,
     EdgeInsetsGeometry? contentPadding,
