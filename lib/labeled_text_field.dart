@@ -10,15 +10,15 @@ class LabeledTextField extends StatelessWidget {
   final TextStyle? titleStyling;
 
   /// Provide [MaterialTextField] as child
-  final Widget child;
+  final MaterialTextField textField;
 
-  /// Spacing between label and [child]
+  /// Spacing between label and [textField]
   final double labelSpacing;
 
   const LabeledTextField({
     super.key,
     required this.title,
-    required this.child,
+    required this.textField,
     this.titleStyling,
     this.labelSpacing = 8,
   });
@@ -46,7 +46,7 @@ class LabeledTextField extends StatelessWidget {
         SizedBox(
           height: labelSpacing,
         ),
-        child,
+        textField,
       ],
     );
   }
