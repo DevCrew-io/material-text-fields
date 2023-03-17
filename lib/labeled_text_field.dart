@@ -1,15 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:material_text_fields/material_text_fields.dart';
 
+/// This class is used for labeled text field [example]
 class LabeledTextField extends StatelessWidget {
+  /// Label title
   final String title;
+
+  /// Label text styling
   final TextStyle? titleStyling;
-  final Widget child;
+
+  /// Provide [MaterialTextField] as child
+  final MaterialTextField textField;
+
+  /// Spacing between label and [textField]
   final double labelSpacing;
 
   const LabeledTextField({
     super.key,
     required this.title,
-    required this.child,
+    required this.textField,
     this.titleStyling,
     this.labelSpacing = 8,
   });
@@ -37,7 +46,7 @@ class LabeledTextField extends StatelessWidget {
         SizedBox(
           height: labelSpacing,
         ),
-        child,
+        textField,
       ],
     );
   }

@@ -49,73 +49,75 @@ class _MyHomePageState extends State<MyHomePage> {
         padding: const EdgeInsets.all(20),
         child: Form(
           key: _key,
-          child: Column(
-            children: [
-              const SizedBox(
-                height: 16,
-              ),
-              MaterialTextField(
-                keyboardType: TextInputType.emailAddress,
-                hint: "Email",
-                textInputAction: TextInputAction.next,
-                prefixIcon: Image.asset(ImagePath.icEmail),
-                controller: _emailController,
-                validator: FormValidation.emailTextField,
-              ),
-              const SizedBox(
-                height: 20,
-              ),
-              MaterialTextField(
-                keyboardType: TextInputType.text,
-                hint: "Full Name",
-                labelText: "Name",
-                theme: MaterialTextFieldTheme.filledOrOutlinedTextTheme(
-                  enabledColor: Colors.grey,
-                  focusedColor: Colors.green,
-                  fillColor: Colors.transparent,
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                const SizedBox(
+                  height: 16,
                 ),
-                textInputAction: TextInputAction.next,
-                prefixIcon: Image.asset(ImagePath.icEmail),
-                validator: FormValidation.requiredTextField,
-              ),
-              const SizedBox(
-                height: 20,
-              ),
-              MaterialTextField(
-                keyboardType: TextInputType.number,
-                hint: "age",
-                theme: MaterialTextFieldTheme.borderlessTextTheme(),
-                textInputAction: TextInputAction.next,
-                validator: FormValidation.requiredTextField,
-              ),
-              const SizedBox(
-                height: 20,
-              ),
-              LabeledTextField(
-                title: 'Password',
-                child: MaterialTextField(
+                MaterialTextField(
                   keyboardType: TextInputType.emailAddress,
-                  hint: 'Password',
-                  textInputAction: TextInputAction.done,
-                  obscureText: true,
+                  hint: "Email",
+                  textInputAction: TextInputAction.next,
+                  prefixIcon: Image.asset(ImagePath.icEmail),
+                  controller: _emailController,
+                  validator: FormValidation.emailTextField,
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                MaterialTextField(
+                  keyboardType: TextInputType.text,
+                  hint: "Full Name",
+                  labelText: "Name",
                   theme: MaterialTextFieldTheme.filledOrOutlinedTextTheme(
-                    fillColor: Colors.red.withAlpha(50),
-                    radius: 80,
+                    enabledColor: Colors.grey,
+                    focusedColor: Colors.green,
+                    fillColor: Colors.transparent,
                   ),
-                  prefixIcon: Image.asset(ImagePath.icLock),
-                  suffixIcon: const Icon(Icons.visibility),
-                  controller: _passwordController,
+                  textInputAction: TextInputAction.next,
+                  prefixIcon: Image.asset(ImagePath.icEmail),
                   validator: FormValidation.requiredTextField,
                 ),
-              ),
-              const SizedBox(
-                height: 20,
-              ),
-              ElevatedButton(
-                onPressed: onSubmitBtnPressed,
-                child: const Text('Submit'),
-              )
-            ],
+                const SizedBox(
+                  height: 20,
+                ),
+                MaterialTextField(
+                  keyboardType: TextInputType.number,
+                  hint: "age",
+                  theme: MaterialTextFieldTheme.borderlessTextTheme(),
+                  textInputAction: TextInputAction.next,
+                  validator: FormValidation.requiredTextField,
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                LabeledTextField(
+                  title: 'Password',
+                  textField: MaterialTextField(
+                    keyboardType: TextInputType.emailAddress,
+                    hint: 'Password',
+                    textInputAction: TextInputAction.done,
+                    obscureText: true,
+                    theme: MaterialTextFieldTheme.filledOrOutlinedTextTheme(
+                      fillColor: Colors.red.withAlpha(50),
+                      radius: 80,
+                    ),
+                    prefixIcon: Image.asset(ImagePath.icLock),
+                    suffixIcon: const Icon(Icons.visibility),
+                    controller: _passwordController,
+                    validator: FormValidation.requiredTextField,
+                  ),
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                ElevatedButton(
+                  onPressed: onSubmitBtnPressed,
+                  child: const Text('Submit'),
+                )
+              ],
+            ),
           ),
         ),
       ),
