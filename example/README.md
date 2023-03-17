@@ -2,9 +2,9 @@
 
 ## Screenshots
 
-|                                Material                                |                               Text                               | Field                                                                  |
+|                                                                        |                                                                  |                                                                   |
 |:----------------------------------------------------------------------:|:----------------------------------------------------------------:|:-----------------------------------------------------------------------|
-| ![Alt text](/screenshots/screenshot1.png?raw=true "Onboarding screen") | ![Alt text](/screenshots/screenshot2.png?raw=true "Home Screen") | ![Alt text](/screenshots/screenshot3.png?raw=true "My Courses screen") |
+| ![Alt text](https://user-images.githubusercontent.com/93918747/225885735-061511b1-11cb-469f-9c4d-e18cb2f0a5e5.png) | ![Alt text](https://user-images.githubusercontent.com/93918747/225885922-6a11a1b1-e3a0-4586-8d7d-b229f964d444.png) | ![Alt text](https://user-images.githubusercontent.com/93918747/225886138-0712113d-9813-4d90-b50b-3c25407febcf.png) |
 
   ```dart
   
