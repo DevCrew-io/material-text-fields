@@ -1,26 +1,23 @@
 # Material Text Field
+[![license](https://img.shields.io/badge/license-MIT-green)](https://github.com/DevCrew-io/material-text-fields/blob/main/LICENSE)
 Material Text Field is a customizable widget for text input values in Dart. You can define the styling of the text field in your app's theme file or create multiple text fields with different styling.With this package, you can easily create text input fields with customizable styling and behaviors.
 ## Installation
-To use Material Text Field in your Dart project, add the following dependency to your
-
-```bash
-- pubspec.yaml file:
-```
+To use Material Text Field in your Dart project, add the following dependency to your "pubspec.yaml" file
 
   ```dart
 dependencies:
-  material_text_field: ^<latest-version>
+  material_text_field: <latest-version>
 ```
 Then run flutter pub get to install the package.
 
-In your library add the following import:
+In your library add the following import
 
 ```dart
 import 'package:material_text_fields/material_text_fields.dart';
 ```
 
 ## Usage
-To use Material Text Field in your Flutter app, import the package and create a new instance of the MaterialTextField widget:
+To use Material Text Field in your Flutter app, import the package and create a new instance of the MaterialTextField widget
 
   ```dart
              MaterialTextField(
@@ -32,8 +29,6 @@ To use Material Text Field in your Flutter app, import the package and create a 
                 validator: FormValidation.emailTextField,
               ),
 ```
-
-This will adopt the app level theme property of inputDecoration.
 
 You can create multiple text fields with different styling with providing "theme" attribute.
 
@@ -86,7 +81,7 @@ To define the styling of the text field, you can either use the app-level theme 
 
 You can use MaterialTextFieldTheme class for text field theming. This Theme class which define theming for Filled/Outlined and underline text field theming. You can use this class for text feild theming
 
-##### Example 1 (Filled Text Field)
+#### Example 1 (Filled Text Field)
 
 Here is an example of filled field
 
@@ -102,7 +97,7 @@ Here is an example of filled field
               ),
 ```
 
-##### Theme data
+#### Theme data
 
 Theme data class looks like
 
@@ -121,11 +116,11 @@ To define the text field style in your app-level theme file, add the following c
       );
 ```
 
-##### Output
+#### Output
 
 ![Alt text](https://user-images.githubusercontent.com/93918747/225826444-b3c01d7e-5693-4cfe-b804-406ec1492c15.png)
 
-##### Example 2 (Filled Outlined Text Field)
+#### Example 2 (Filled Outlined Text Field)
 Here is an example of filled text field with outlined border (enable and focus border)
 
  ```dart
@@ -140,7 +135,7 @@ Here is an example of filled text field with outlined border (enable and focus b
               ),
 ```
 
-##### Theme data
+#### Theme data
 
 Theme data class looks like
 
@@ -159,11 +154,11 @@ Theme data class looks like
       );
 ```
 
-##### Output
+#### Output
 
 ![Alt text](https://user-images.githubusercontent.com/93918747/225827800-38f7bfe1-06f4-414b-8f37-c95d8affa19c.png)
 
-##### Example 3 (Outlined Text Field)
+#### Example 3 (Outlined Text Field)
 Here is an example of Outlined text field
 
  ```dart
@@ -178,7 +173,7 @@ Here is an example of Outlined text field
               ),
 ```
 
-##### Theme data
+#### Theme data
 
 Theme data class looks like
 
@@ -198,11 +193,11 @@ Theme data class looks like
       );
 ```
 
-##### Output
+#### Output
 
 ![Alt text](https://user-images.githubusercontent.com/93918747/225830150-da423061-a589-4448-8064-e0782b4e0b66.png)
 
-##### Example 4 (Underline Text Field)
+#### Example 4 (Underline Text Field)
 
 Here is an example of Underline text field
 
@@ -217,7 +212,7 @@ Here is an example of Underline text field
               ),
 ```
 
-##### Theme data
+#### Theme data
 
 Theme data class looks like
 
@@ -233,11 +228,11 @@ ThemeData(
       );
 ```
 
-##### Output
+#### Output
 
 ![Alt text](https://user-images.githubusercontent.com/93918747/225832127-c34ffdd3-7e0b-4f70-a01a-5a83a02a63c4.png)
 
-##### Example 5 (Labeled Text Field)
+#### Example 5 (Labeled Text Field)
 
 Example of labeled text field
 
@@ -267,7 +262,7 @@ Example of labeled text field
               );
 ```
 
-##### Output
+#### Output
 
 ![Alt text](https://user-images.githubusercontent.com/93918747/225833980-87f74870-86ae-4385-af4c-30d64357ca35.png)
 
@@ -299,3 +294,6 @@ If your problem or idea is not addressed yet, [please open a new issue](https://
 
 Code copyright 2023–2024 DevCrew I/O.
 Code released under the [MIT license](https://github.com/DevCrew-io/material-text-fields/blob/main/LICENSE).
+
+
+
