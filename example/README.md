@@ -1,16 +1,102 @@
-# example
+# Material Text Field
 
-A new Flutter project.
+## Screenshots
 
-## Getting Started
+|                                Material                                |                               Text                               | Field                                                                  |
+|:----------------------------------------------------------------------:|:----------------------------------------------------------------:|:-----------------------------------------------------------------------|
+| ![Alt text](/screenshots/screenshot1.png?raw=true "Onboarding screen") | ![Alt text](/screenshots/screenshot2.png?raw=true "Home Screen") | ![Alt text](/screenshots/screenshot3.png?raw=true "My Courses screen") |
 
-This project is a starting point for a Flutter application.
+  ```dart
+  
+  final GlobalKey<FormState> _key = GlobalKey<FormState>();
 
-A few resources to get you started if this is your first Flutter project:
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
+  
+```  
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+  ```dart
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+   Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Material Text Field'),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(20),
+        child: Form(
+          key: _key,
+          child: Column(
+            children: [
+              const SizedBox(height: 16),
+              MaterialTextField(
+                keyboardType: TextInputType.emailAddress,
+                hint: "Email",
+                textInputAction: TextInputAction.next,
+                prefixIcon: Image.asset(ImagePath.icEmail),
+                controller: _emailController,
+                validator: FormValidation.emailTextField,
+              ),
+              const SizedBox(height: 20),
+              MaterialTextField(
+                keyboardType: TextInputType.text,
+                hint: "Full Name",
+                labelText: "Name",
+                theme: MaterialTextFieldTheme.filledOrOutlinedTextTheme(
+                  enabledColor: Colors.grey,
+                  focusedColor: Colors.green,
+                  fillColor: Colors.transparent,
+                ),
+                textInputAction: TextInputAction.next,
+                prefixIcon: Image.asset(ImagePath.icEmail),
+                validator: FormValidation.requiredTextField,
+              ),
+              const SizedBox(height: 20),
+              MaterialTextField(
+                keyboardType: TextInputType.number,
+                hint: "age",
+                theme: MaterialTextFieldTheme.borderlessTextTheme(),
+                textInputAction: TextInputAction.next,
+                validator: FormValidation.requiredTextField,
+              ),
+              const SizedBox(height: 20),
+              LabeledTextField(
+                title: 'Password',
+                child: MaterialTextField(
+                  keyboardType: TextInputType.emailAddress,
+                  hint: 'Password',
+                  textInputAction: TextInputAction.done,
+                  obscureText: true,
+                  theme: MaterialTextFieldTheme.filledOrOutlinedTextTheme(
+                    fillColor: Colors.red.withAlpha(50),
+                    radius: 80,
+                  ),
+                  prefixIcon: Image.asset(ImagePath.icLock),
+                  suffixIcon: const Icon(Icons.visibility),
+                  controller: _passwordController,
+                  validator: FormValidation.requiredTextField,
+                ),
+              ),
+              const SizedBox(height: 20),
+              ElevatedButton(
+                onPressed: onSubmitBtnPressed,
+                child: const Text('Submit'),
+              )
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+```  
+
+  ```dart
+  
+    onSubmitBtnPressed() {
+    if (_key.currentState?.validate() == true) {
+      // perform some task.
+    }
+  }
+  
+```    
