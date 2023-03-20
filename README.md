@@ -31,7 +31,7 @@ To use Material Text Field in your Flutter app, import the package and create a 
                 prefixIcon: Image.asset(ImagePath.icEmail),
                 controller: _emailController,
                 validator: FormValidation.emailTextField,
-              ),
+              )
 ```
 
 You can create multiple text fields with different styling with providing "theme" attribute.
@@ -46,7 +46,7 @@ You can create multiple text fields with different styling with providing "theme
                   fillColor: Colors.transparent,
                 ),
                 prefixIcon: Image.asset(ImagePath.icEmail),
-              ),
+              )
 ```
 
 ## Advance Usage
@@ -90,15 +90,15 @@ You can use MaterialTextFieldTheme class for text field theming. This Theme clas
 Here is an example of filled field
 
  ```dart
-                MaterialTextField(
-                   keyboardType: TextInputType.emailAddress,
-                   hint: "Email",
-                   textInputAction: TextInputAction.next,
-                   prefixIcon: const Icon(Icons.email_outlined),
-                   suffixIcon: const Icon(Icons.check),
-                   controller: _emailController,
-                   validator: FormValidation.emailTextField,
-               ),
+     MaterialTextField(
+         keyboardType: TextInputType.emailAddress,
+         hint: "Email",
+         textInputAction: TextInputAction.next,
+         prefixIcon: const Icon(Icons.email_outlined),
+         suffixIcon: const Icon(Icons.check),
+         controller: _emailController,
+         validator: FormValidation.emailTextField,
+       )
 ```
 
 To define the text field style in your app-level theme file, add the following code to your ThemeData:
@@ -112,7 +112,7 @@ To define the text field style in your app-level theme file, add the following c
         fillColor: Colors.red.withAlpha(50),
         suffixIconColor: Colors.green,
         prefixIconColor: Colors.blue,
-    ),
+         ),
       );
 ```
 
@@ -124,15 +124,15 @@ To define the text field style in your app-level theme file, add the following c
 Here is an example of filled text field with outlined border (enable and focus border)
 
  ```dart
-                MaterialTextField(
-                   keyboardType: TextInputType.emailAddress,
-                   hint: "Email",
-                   textInputAction: TextInputAction.next,
-                   prefixIcon: const Icon(Icons.email_outlined),
-                   suffixIcon: const Icon(Icons.check),
-                   controller: _emailController,
-                   validator: FormValidation.emailTextField,
-                ),
+     MaterialTextField(
+         keyboardType: TextInputType.emailAddress,
+         hint: "Email",
+         textInputAction: TextInputAction.next,
+         prefixIcon: const Icon(Icons.email_outlined),
+         suffixIcon: const Icon(Icons.check),
+         controller: _emailController,
+         validator: FormValidation.emailTextField,
+        )
 ```
 
 To define the text field style in your app-level theme file, add the following code to your ThemeData:
@@ -160,15 +160,15 @@ To define the text field style in your app-level theme file, add the following c
 Here is an example of Outlined text field
 
  ```dart
-                MaterialTextField(
-                keyboardType: TextInputType.emailAddress,
-                hint: "Email",
-                labelText: 'Email',
-                textInputAction: TextInputAction.next,
-                prefixIcon: const Icon(Icons.email_outlined),
-                controller: _emailController,
-                validator: FormValidation.emailTextField,
-              ),
+   MaterialTextField(
+      keyboardType: TextInputType.emailAddress,
+      hint: "Email",
+      labelText: 'Email',
+      textInputAction: TextInputAction.next,
+      prefixIcon: const Icon(Icons.email_outlined),
+      controller: _emailController,
+      validator: FormValidation.emailTextField,
+     )
 ```
 
 To define the text field style in your app-level theme file, add the following code to your ThemeData:
@@ -198,14 +198,14 @@ To define the text field style in your app-level theme file, add the following c
 Here is an example of Underline text field
 
  ```dart
-                MaterialTextField(
-                keyboardType: TextInputType.emailAddress,
-                hint: "Email",
-                textInputAction: TextInputAction.next,
-                suffixIcon: const Icon(Icons.email_outlined),
-                controller: _emailController,
-                validator: FormValidation.emailTextField,
-              ),
+ MaterialTextField(
+      keyboardType: TextInputType.emailAddress,
+      hint: "Email",
+      textInputAction: TextInputAction.next,
+      suffixIcon: const Icon(Icons.email_outlined),
+      controller: _emailController,
+      validator: FormValidation.emailTextField,
+   )
 ```
 
 To define the text field style in your app-level theme file, add the following code to your ThemeData:
