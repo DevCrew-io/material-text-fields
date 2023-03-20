@@ -8,11 +8,20 @@
 
   ```dart
   
-  final GlobalKey<FormState> _key = GlobalKey<FormState>();
+final GlobalKey<FormState> _key = GlobalKey<FormState>();
 
-  final TextEditingController _emailController = TextEditingController();
-  final TextEditingController _passwordController = TextEditingController();
+final TextEditingController _emailController = TextEditingController();
+final TextEditingController _passwordController = TextEditingController();
   
+```  
+  ```dart
+ThemeData(
+  brightness: Brightness.light,
+  inputDecorationTheme: MaterialTextFieldTheme.filledOrOutlinedTextTheme(
+    radius: 16
+   ),
+);
+
 ```  
 
   ```dart
