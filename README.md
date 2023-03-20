@@ -1,5 +1,9 @@
 # Material Text Field
+[![pub package](https://img.shields.io/pub/v/material_text_fields.svg)](https://pub.dev/packages/material_text_fields)
 [![license](https://img.shields.io/badge/license-MIT-green)](https://github.com/DevCrew-io/material-text-fields/blob/main/LICENSE)
+![](https://img.shields.io/badge/Code-Dart-informational?style=flat&logo=dart&color=29B1EE)
+![](https://img.shields.io/badge/Code-Flutter-informational?style=flat&logo=flutter&color=0C459C)
+
 Material Text Field is a customizable widget for text input values in Dart. You can define the styling of the text field in your app's theme file or create multiple text fields with different styling.With this package, you can easily create text input fields with customizable styling and behaviors.
 ## Installation
 To use Material Text Field in your Dart project, add the following dependency to your "pubspec.yaml" file
@@ -70,7 +74,7 @@ With all possible params
                     focusedColor: Colors.green,
                     fillColor: Colors.transparent,
                   ) // Provide this param if you want to differ this text field from app level theming,
-                  )
+                )
 ```
 
 ## Theming
@@ -87,32 +91,28 @@ Here is an example of filled field
 
  ```dart
                 MaterialTextField(
-                keyboardType: TextInputType.emailAddress,
-                hint: "Email",
-                textInputAction: TextInputAction.next,
-                prefixIcon: const Icon(Icons.email_outlined),
-                suffixIcon: const Icon(Icons.check),
-                controller: _emailController,
-                validator: FormValidation.emailTextField,
-              ),
+                   keyboardType: TextInputType.emailAddress,
+                   hint: "Email",
+                   textInputAction: TextInputAction.next,
+                   prefixIcon: const Icon(Icons.email_outlined),
+                   suffixIcon: const Icon(Icons.check),
+                   controller: _emailController,
+                   validator: FormValidation.emailTextField,
+               ),
 ```
-
-#### Theme data
-
-Theme data class looks like
 
 To define the text field style in your app-level theme file, add the following code to your ThemeData:
 
   ```dart
       ThemeData(
        inputDecorationTheme: MaterialTextFieldTheme.filledOrOutlinedTextTheme(
-   radius: 16,
-    contentPadding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
-    errorStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700),
-    fillColor: Colors.red.withAlpha(50),
-    suffixIconColor: Colors.green,
-    prefixIconColor: Colors.blue,
-  ),
+        radius: 16,
+        contentPadding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
+        errorStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700),
+        fillColor: Colors.red.withAlpha(50),
+        suffixIconColor: Colors.green,
+        prefixIconColor: Colors.blue,
+    ),
       );
 ```
 
@@ -125,33 +125,31 @@ Here is an example of filled text field with outlined border (enable and focus b
 
  ```dart
                 MaterialTextField(
-                keyboardType: TextInputType.emailAddress,
-                hint: "Email",
-                textInputAction: TextInputAction.next,
-                prefixIcon: const Icon(Icons.email_outlined),
-                suffixIcon: const Icon(Icons.check),
-                controller: _emailController,
-                validator: FormValidation.emailTextField,
-              ),
+                   keyboardType: TextInputType.emailAddress,
+                   hint: "Email",
+                   textInputAction: TextInputAction.next,
+                   prefixIcon: const Icon(Icons.email_outlined),
+                   suffixIcon: const Icon(Icons.check),
+                   controller: _emailController,
+                   validator: FormValidation.emailTextField,
+                ),
 ```
 
-#### Theme data
-
-Theme data class looks like
+To define the text field style in your app-level theme file, add the following code to your ThemeData:
 
   ```dart
       ThemeData(
-       inputDecorationTheme: MaterialTextFieldTheme.filledOrOutlinedTextTheme(
- radius: 30,
-    contentPadding: const EdgeInsets.symmetric(horizontal: 4, vertical: 4),
-    errorStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700),
-    fillColor: Colors.grey.withAlpha(30),
-    suffixIconColor: Colors.red,
-    prefixIconColor: Colors.blue,
-    enabledColor: Colors.grey,
-    focusedColor: Colors.green
-  ),
-      );
+        inputDecorationTheme: MaterialTextFieldTheme.filledOrOutlinedTextTheme(
+        radius: 30,
+        contentPadding: const EdgeInsets.symmetric(horizontal: 4, vertical: 4),
+        errorStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700),
+        fillColor: Colors.grey.withAlpha(30),
+        suffixIconColor: Colors.red,
+        prefixIconColor: Colors.blue,
+        enabledColor: Colors.grey,
+        focusedColor: Colors.green
+       ),
+    );
 ```
 
 #### Output
@@ -173,23 +171,21 @@ Here is an example of Outlined text field
               ),
 ```
 
-#### Theme data
-
-Theme data class looks like
+To define the text field style in your app-level theme file, add the following code to your ThemeData:
 
  ```dart
       ThemeData(
-       inputDecorationTheme: MaterialTextFieldTheme.filledOrOutlinedTextTheme(
-    radius: 8,
-    contentPadding: const EdgeInsets.symmetric(horizontal: 4, vertical: 4),
-    errorStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700),
-    fillColor: Colors.transparent,
-    prefixIconColor: Colors.green,
-    enabledColor: Colors.grey,
-    focusedColor: Colors.green,
-    floatingLabelStyle: const TextStyle(color: Colors.green),
-    width: 1.5,
-    labelStyle: const TextStyle(fontSize: 16, color: Colors.black),
+        inputDecorationTheme: MaterialTextFieldTheme.filledOrOutlinedTextTheme(
+         radius: 8,
+         contentPadding: const EdgeInsets.symmetric(horizontal: 4, vertical: 4),
+         errorStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700),
+         fillColor: Colors.transparent,
+         prefixIconColor: Colors.green,
+         enabledColor: Colors.grey,
+         focusedColor: Colors.green,
+         floatingLabelStyle: const TextStyle(color: Colors.green),
+         width: 1.5,
+         labelStyle: const TextStyle(fontSize: 16, color: Colors.black),
       );
 ```
 
@@ -212,9 +208,7 @@ Here is an example of Underline text field
               ),
 ```
 
-#### Theme data
-
-Theme data class looks like
+To define the text field style in your app-level theme file, add the following code to your ThemeData:
 
  ```dart
 ThemeData(
@@ -225,7 +219,7 @@ ThemeData(
     focusedColor: Colors.green,
     floatingLabelStyle: const TextStyle(color: Colors.green),
     width: 1,
-      );
+  );
 ```
 
 #### Output
@@ -285,14 +279,30 @@ You can specify the styling directly on the widget
         );
 ```
 
-## Bugs and feature requests
+## Author
+[DevCrew.IO](https://devcrew.io/)
 
+<h3 align="left">Connect with Us:</h3>
+<p align="left">
+<a href="https://devcrew.io" target="blank"><img align="center" src="https://devcrew.io/wp-content/uploads/2022/09/logo.svg" alt="devcrew.io" height="35" width="35" /></a>
+<a href="https://www.linkedin.com/company/devcrew-io/mycompany/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="mycompany" height="30" width="40" /></a>
+<a href="https://www.facebook.com/devcrew.io" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="devcrew.io" height="30" width="40" /></a>
+<a href="https://www.instagram.com/devcrew.io" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="devcrew.io" height="30" width="40" /></a>
+<a href="https://github.com/DevCrew-io" target="blank"><img align="center" src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="DevCrew-io" height="32" width="32" /></a>
+</p>
+
+
+## Contributing 
+Contributions, issues, and feature requests are welcome! 
+## Show your Support 
+Give a start if this project helped you. 
+
+## Bugs and feature requests
 Have a bug or a feature request? Please first search for existing and closed issues.
 If your problem or idea is not addressed yet, [please open a new issue](https://github.com/DevCrew-io/material-text-fields/issues/new).
 
 ## Copyright & License
-
-Code copyright 2023–2024 DevCrew I/O.
+Code copyright 2023–2024 [DevCrew I/O](https://devcrew.io/).
 Code released under the [MIT license](https://github.com/DevCrew-io/material-text-fields/blob/main/LICENSE).
 
 
