@@ -83,7 +83,7 @@ To define the styling of the text field, you can either use the app-level theme 
 
 ### App-level theme
 
-You can use MaterialTextFieldTheme class for text field theming. This Theme class which define theming for Filled/Outlined and underline text field theming. You can use this class for text feild theming
+You can use MaterialTextFieldTheme class for text field theming. This Theme class which define theming for Filled/Outlined and underline text field theming. You can use this class for text field theming
 
 #### Example 1 (Filled Text Field)
 
@@ -193,9 +193,9 @@ To define the text field style in your app-level theme file, add the following c
 
 ![Alt text](https://user-images.githubusercontent.com/93918747/225830150-da423061-a589-4448-8064-e0782b4e0b66.png)
 
-#### Example 4 (Underline Text Field)
+#### Example 4 (Underline/Default Text Field)
 
-Here is an example of Underline text field
+Here is an example of Underline/default text field
 
  ```dart
  MaterialTextField(
@@ -208,7 +208,7 @@ Here is an example of Underline text field
    )
 ```
 
-To define the text field style in your app-level theme file, add the following code to your ThemeData:
+If you want to apply theming on underline/default field, Use this  MaterialTextFieldTheme.borderlessTextTheme function.
 
  ```dart
 ThemeData(
