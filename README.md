@@ -4,7 +4,7 @@
 ![](https://img.shields.io/badge/Code-Dart-informational?style=flat&logo=dart&color=29B1EE)
 ![](https://img.shields.io/badge/Code-Flutter-informational?style=flat&logo=flutter&color=0C459C)
 
-Material Text Field is a customizable widget for text input values in Dart. You can define the styling of the text field in your app's theme file or create multiple text fields with different styling.With this package, you can easily create text input fields with customizable styling and behaviors.
+Material Text Field is a customizable widget for text input values in Dart. You can define the styling of the text field in your app's theme file or create multiple text fields with different styling. You can easily create text input fields with customizable styling and behaviors.
 ## Installation
 To use Material Text Field in your Dart project, add the following dependency to your "pubspec.yaml" file
 
@@ -12,7 +12,7 @@ To use Material Text Field in your Dart project, add the following dependency to
 dependencies:
   material_text_field: <latest-version>
 ```
-Then run flutter pub get to install the package.
+Then run ```flutter pub get``` to install the package.
 
 In your library add the following import
 
@@ -26,10 +26,10 @@ To use Material Text Field in your Flutter app, import the package and create a 
   ```dart
              MaterialTextField(
                 keyboardType: TextInputType.emailAddress,
-                hint: "Email",
+                hint: 'Email',
                 textInputAction: TextInputAction.next,
                 prefixIcon: Image.asset(ImagePath.icEmail),
-                controller: _emailController,
+                controller: _emailTextController,   // TextEditingController _emailTextController = TextEditingController()
                 validator: FormValidation.emailTextField,
               )
 ```
@@ -39,13 +39,13 @@ You can create multiple text fields with different styling with providing "theme
   ```dart
               MaterialTextField(
                 keyboardType: TextInputType.text,
-                labelText: "Name",
+                labelText: 'Name',
                 theme: MaterialTextFieldTheme.filledOrOutlinedTextTheme(
                   enabledColor: Colors.grey,
                   focusedColor: Colors.green,
                   fillColor: Colors.transparent,
                 ),
-                prefixIcon: Image.asset(ImagePath.icEmail),
+                prefixIcon: Image.asset('assets/images/ic_email.png'),
               )
 ```
 
@@ -56,19 +56,19 @@ With all possible params
   ```dart
                MaterialTextField(
                   keyboardType: TextInputType.emailAddress,
-                  hint: "Email",
+                  hint: 'Email',
                   textInputAction: TextInputAction.next,
-                  prefixIcon: Image.asset(ImagePath.icLock),
-                  controller: _emailController,
+                  prefixIcon: Image.asset('assets/images/ic_lock.png'),
+                  controller: _emailTextController,
                   validator: FormValidation.emailTextField,
                   onChanged: (text) {
                     print('First text field: $text');
                   },
-                  suffixIcon: Image.asset(ImagePath.icLock),
+                  suffixIcon: Image.asset('assets/images/ic_lock.png'),
                   enabled: false,
                   obscureText: true,
                   style: const TextStyle(fontSize: 16, color: Colors.black),
-                  labelText: "Password",
+                  labelText: 'Password',
                   theme: MaterialTextFieldTheme.filledOrOutlinedTextTheme(
                     enabledColor: Colors.grey,
                     focusedColor: Colors.green,
@@ -92,11 +92,11 @@ Here is an example of filled field
  ```dart
      MaterialTextField(
          keyboardType: TextInputType.emailAddress,
-         hint: "Email",
+         hint: 'Email',
          textInputAction: TextInputAction.next,
          prefixIcon: const Icon(Icons.email_outlined),
          suffixIcon: const Icon(Icons.check),
-         controller: _emailController,
+         controller: _emailTextController,
          validator: FormValidation.emailTextField,
        )
 ```
@@ -126,11 +126,11 @@ Here is an example of filled text field with outlined border (enable and focus b
  ```dart
      MaterialTextField(
          keyboardType: TextInputType.emailAddress,
-         hint: "Email",
+         hint: 'Email',
          textInputAction: TextInputAction.next,
          prefixIcon: const Icon(Icons.email_outlined),
          suffixIcon: const Icon(Icons.check),
-         controller: _emailController,
+         controller: _emailTextController,
          validator: FormValidation.emailTextField,
         )
 ```
@@ -162,11 +162,11 @@ Here is an example of Outlined text field
  ```dart
    MaterialTextField(
       keyboardType: TextInputType.emailAddress,
-      hint: "Email",
+      hint: 'Email',
       labelText: 'Email',
       textInputAction: TextInputAction.next,
       prefixIcon: const Icon(Icons.email_outlined),
-      controller: _emailController,
+      controller: _emailTextController,
       validator: FormValidation.emailTextField,
      )
 ```
@@ -200,10 +200,10 @@ Here is an example of Underline/default text field
  ```dart
  MaterialTextField(
       keyboardType: TextInputType.emailAddress,
-      hint: "Email",
+      hint: 'Email',
       textInputAction: TextInputAction.next,
       suffixIcon: const Icon(Icons.email_outlined),
-      controller: _emailController,
+      controller: _emailTextController,
       validator: FormValidation.emailTextField,
    )
 ```
@@ -248,9 +248,9 @@ Example of labeled text field
                     fillColor: Colors.green.withAlpha(50),
                     radius: 12,
                   ),
-                  prefixIcon: Image.asset(ImagePath.icLock),
+                  prefixIcon: Image.asset('assets/images/ic_lock.png'),
                   suffixIcon: const Icon(Icons.visibility),
-                  controller: _passwordController,
+                  controller: _passwordTextController,
                   validator: FormValidation.requiredTextField,
                 ),
               );
@@ -266,15 +266,15 @@ You can specify the styling directly on the widget
 ```dart
     MaterialTextField(
         keyboardType: TextInputType.text,
-        hint: "Full Name",
-        labelText: "Name",
+        hint: 'Full Name',
+        labelText: 'Name',
         theme: MaterialTextFieldTheme.filledOrOutlinedTextTheme(
             enabledColor: Colors.grey,
             focusedColor: Colors.green,
             fillColor: Colors.transparent,
                 ),
         textInputAction: TextInputAction.next,
-        prefixIcon: Image.asset(ImagePath.icEmail),
+        prefixIcon: Image.asset('assets/images/ic_email.png'),
         validator: FormValidation.requiredTextField,
         );
 ```
