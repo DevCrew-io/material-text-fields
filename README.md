@@ -1,5 +1,5 @@
 # Material Text Field
-[![pub package](https://img.shields.io/pub/v/material_text_fields.svg)](https://pub.dev/packages/material_text_fields)
+[![pub package](https://img.shields.io/pub/v/material_text_field.svg)](https://pub.dev/packages/material_text_field)
 [![license](https://img.shields.io/badge/license-MIT-green)](https://github.com/DevCrew-io/material-text-fields/blob/main/LICENSE)
 ![](https://img.shields.io/badge/Code-Dart-informational?style=flat&logo=dart&color=29B1EE)
 ![](https://img.shields.io/badge/Code-Flutter-informational?style=flat&logo=flutter&color=0C459C)
@@ -17,7 +17,7 @@ Then run ```flutter pub get``` to install the package.
 In your library add the following import
 
 ```dart
-import 'package:material_text_fields/material_text_fields.dart';
+import 'package:material_text_field/material_text_fields.dart';
 ```
 
 ## Usage

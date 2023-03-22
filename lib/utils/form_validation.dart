@@ -1,4 +1,4 @@
-import 'package:material_text_fields/utils/extensions.dart';
+import 'package:material_text_field/utils/extensions.dart';
 
 /// Extension function implementations for field validation
 class FormValidation {
