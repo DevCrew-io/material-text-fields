@@ -295,7 +295,7 @@ You can specify the styling directly on the widget
 ## Contributing 
 Contributions, issues, and feature requests are welcome! 
 ## Show your Support 
-Give a start if this project helped you. 
+Give a star if this project helped you. 
 
 ## Bugs and feature requests
 Have a bug or a feature request? Please first search for existing and closed issues.
