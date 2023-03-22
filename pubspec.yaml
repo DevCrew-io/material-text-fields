@@ -1,7 +1,10 @@
 name: material_text_fields
-description: A new Flutter project.
-version: 0.0.1
-homepage:
+description: Material Text Field is a customizable widget for text input values in Dart. You can define the styling of the text field in your app's theme file or create multiple text fields with different styling
+version: 1.0.0
+homepage: https://github.com/DevCrew-io/material-text-fields#readme
+repository: https://github.com/DevCrew-io/material-text-fields
+issue_tracker: https://github.com/DevCrew-io/material-text-fields/issues
+documentation: https://github.com/DevCrew-io/material-text-fields/blob/main/example/README.md
 
 environment:
   sdk: '>=2.19.2 <3.0.0'
