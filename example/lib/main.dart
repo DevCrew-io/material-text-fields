@@ -1,10 +1,10 @@
 import 'package:example/theme/light_theme.dart';
 import 'package:example/utils/constants.dart';
 import 'package:flutter/material.dart';
-import 'package:material_text_fields/labeled_text_field.dart';
-import 'package:material_text_fields/material_text_fields.dart';
-import 'package:material_text_fields/theme/material_text_field_theme.dart';
-import 'package:material_text_fields/utils/form_validation.dart';
+import 'package:material_text_field/labeled_text_field.dart';
+import 'package:material_text_field/material_text_fields.dart';
+import 'package:material_text_field/theme/material_text_field_theme.dart';
+import 'package:material_text_field/utils/form_validation.dart';
 
 void main() {
   runApp(const MyApp());

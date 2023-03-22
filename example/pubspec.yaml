@@ -30,8 +30,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  material_text_fields:
-    path: /Users/apple/AndroidStudioProjects/material-text-fields
+  material_text_field:
+    path: ../
 
 
   # The following adds the Cupertino Icons font to your application.
