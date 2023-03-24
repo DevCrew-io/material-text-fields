@@ -30,7 +30,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  material_text_field:
+  material_text_fields:
     path: ../
 
 
