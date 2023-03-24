@@ -10,7 +10,7 @@ To use Material Text Field in your Dart project, add the following dependency to
 
   ```dart
 dependencies:
-  material_text_field: <latest-version>
+  material_text_fields: ^<latest-version>
 ```
 Then run ```flutter pub get``` to install the package.
 
@@ -28,7 +28,7 @@ To use Material Text Field in your Flutter app, import the package and create a 
                 keyboardType: TextInputType.emailAddress,
                 hint: 'Email',
                 textInputAction: TextInputAction.next,
-                prefixIcon: Image.asset(ImagePath.icEmail),
+                prefixIcon: Image.asset('assets/images/ic_email.png'),
                 controller: _emailTextController,   // TextEditingController _emailTextController = TextEditingController()
                 validator: FormValidation.emailTextField,
               )
