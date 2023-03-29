@@ -17,7 +17,7 @@ final TextEditingController _passwordController = TextEditingController();
   ```dart
 ThemeData(
   brightness: Brightness.light,
-  inputDecorationTheme: MaterialTextFieldTheme.filledOrOutlinedTextTheme(
+  inputDecorationTheme: FilledOrOutlinedTextTheme(
     radius: 16
    ),
 );
@@ -51,7 +51,7 @@ ThemeData(
                 keyboardType: TextInputType.text,
                 hint: "Full Name",
                 labelText: "Name",
-                theme: MaterialTextFieldTheme.filledOrOutlinedTextTheme(
+                theme: FilledOrOutlinedTextTheme(
                   enabledColor: Colors.grey,
                   focusedColor: Colors.green,
                   fillColor: Colors.transparent,
@@ -64,7 +64,7 @@ ThemeData(
               MaterialTextField(
                 keyboardType: TextInputType.number,
                 hint: "age",
-                theme: MaterialTextFieldTheme.borderlessTextTheme(),
+                theme: BorderlessTextTheme(),
                 textInputAction: TextInputAction.next,
                 validator: FormValidation.requiredTextField,
               ),
@@ -76,7 +76,7 @@ ThemeData(
                   hint: 'Password',
                   textInputAction: TextInputAction.done,
                   obscureText: true,
-                  theme: MaterialTextFieldTheme.filledOrOutlinedTextTheme(
+                  theme: FilledOrOutlinedTextTheme(
                     fillColor: Colors.red.withAlpha(50),
                     radius: 80,
                   ),
