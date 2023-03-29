@@ -70,7 +70,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   keyboardType: TextInputType.text,
                   hint: "Full Name",
                   labelText: "Name",
-                  theme: MaterialTextFieldTheme.filledOrOutlinedTextTheme(
+                  theme: FilledOrOutlinedTextTheme(
                     enabledColor: Colors.grey,
                     focusedColor: Colors.green,
                     fillColor: Colors.transparent,
@@ -85,7 +85,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 MaterialTextField(
                   keyboardType: TextInputType.number,
                   hint: "age",
-                  theme: MaterialTextFieldTheme.borderlessTextTheme(),
+                  theme: BorderlessTextTheme(),
                   textInputAction: TextInputAction.next,
                   validator: FormValidation.requiredTextField,
                 ),
@@ -99,7 +99,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     hint: 'Password',
                     textInputAction: TextInputAction.done,
                     obscureText: true,
-                    theme: MaterialTextFieldTheme.filledOrOutlinedTextTheme(
+                    theme: FilledOrOutlinedTextTheme(
                       fillColor: Colors.red.withAlpha(50),
                       radius: 80,
                     ),
