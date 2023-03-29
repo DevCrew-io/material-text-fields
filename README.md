@@ -40,10 +40,12 @@ You can create multiple text fields with different styling with providing "theme
               MaterialTextField(
                 keyboardType: TextInputType.text,
                 labelText: 'Name',
-                theme: MaterialTextFieldTheme.filledOrOutlinedTextTheme(
+                theme: FilledOrOutlinedTextTheme(
                   enabledColor: Colors.grey,
                   focusedColor: Colors.green,
                   fillColor: Colors.transparent,
+                  // You can use all properties of FilledOrOutlinedTextTheme
+                  // to decor text field
                 ),
                 prefixIcon: Image.asset('assets/images/ic_email.png'),
               )
@@ -69,11 +71,11 @@ With all possible params
                   obscureText: true,
                   style: const TextStyle(fontSize: 16, color: Colors.black),
                   labelText: 'Password',
-                  theme: MaterialTextFieldTheme.filledOrOutlinedTextTheme(
+                  theme: FilledOrOutlinedTextTheme(
                     enabledColor: Colors.grey,
                     focusedColor: Colors.green,
                     fillColor: Colors.transparent,
-                  ) // Provide this param if you want to differ this text field from app level theming,
+                  ) // you can use theme param to differ this text field from app level theming
                 )
 ```
 
@@ -105,7 +107,7 @@ To define the text field style in your app-level theme file, add the following c
 
   ```dart
       ThemeData(
-       inputDecorationTheme: MaterialTextFieldTheme.filledOrOutlinedTextTheme(
+       inputDecorationTheme: FilledOrOutlinedTextTheme(
         radius: 16,
         contentPadding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
         errorStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700),
@@ -139,7 +141,7 @@ To define the text field style in your app-level theme file, add the following c
 
   ```dart
       ThemeData(
-        inputDecorationTheme: MaterialTextFieldTheme.filledOrOutlinedTextTheme(
+        inputDecorationTheme: FilledOrOutlinedTextTheme(
         radius: 30,
         contentPadding: const EdgeInsets.symmetric(horizontal: 4, vertical: 4),
         errorStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700),
@@ -175,7 +177,7 @@ To define the text field style in your app-level theme file, add the following c
 
  ```dart
       ThemeData(
-        inputDecorationTheme: MaterialTextFieldTheme.filledOrOutlinedTextTheme(
+        inputDecorationTheme: FilledOrOutlinedTextTheme(
          radius: 8,
          contentPadding: const EdgeInsets.symmetric(horizontal: 4, vertical: 4),
          errorStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700),
@@ -212,7 +214,7 @@ If you want to apply theming on underline/default field, Use this  MaterialTextF
 
  ```dart
 ThemeData(
-    inputDecorationTheme: MaterialTextFieldTheme.borderlessTextTheme(
+    inputDecorationTheme: BorderlessTextTheme(
     errorStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700),
     prefixIconColor: Colors.green,
     enabledColor: Colors.grey,
@@ -244,7 +246,7 @@ Example of labeled text field
                  hint: 'Password',
                  textInputAction: TextInputAction.done,
                  obscureText: true,
-                 theme: MaterialTextFieldTheme.filledOrOutlinedTextTheme(
+                 theme: FilledOrOutlinedTextTheme(
                     fillColor: Colors.green.withAlpha(50),
                     radius: 12,
                   ),
@@ -268,7 +270,7 @@ You can specify the styling directly on the widget
         keyboardType: TextInputType.text,
         hint: 'Full Name',
         labelText: 'Name',
-        theme: MaterialTextFieldTheme.filledOrOutlinedTextTheme(
+        theme: FilledOrOutlinedTextTheme(
             enabledColor: Colors.grey,
             focusedColor: Colors.green,
             fillColor: Colors.transparent,
