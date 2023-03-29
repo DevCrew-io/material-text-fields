@@ -54,7 +54,7 @@ class BorderlessTextTheme extends _MaterialTextFieldTheme {
     Color? suffixIconColor,
 
     /// The width to use for border
-    double width = 1,
+    double width = 2,
 
     /// The radius to use for border corners
     double radius = 0,
@@ -84,7 +84,8 @@ class BorderlessTextTheme extends _MaterialTextFieldTheme {
     FloatingLabelBehavior floatingLabelBehavior = FloatingLabelBehavior.auto,
 
     /// {@macro flutter.material.inputDecoration.floatingLabelAlignment}
-    FloatingLabelAlignment floatingLabelAlignment = FloatingLabelAlignment.start,
+    FloatingLabelAlignment floatingLabelAlignment =
+        FloatingLabelAlignment.start,
   }) : super(
           hintStyle: hintStyle,
           contentPadding: contentPadding,
@@ -106,8 +107,8 @@ class BorderlessTextTheme extends _MaterialTextFieldTheme {
             borderSide: BorderSide(),
           ),
           enabledBorder: UnderlineInputBorder(
-              borderSide:
-                  BorderSide(color: enabledColor ?? Colors.blue, width: width),
+              borderSide: BorderSide(
+                  color: enabledColor ?? Colors.blue, width: width - 1),
               borderRadius: BorderRadius.circular(radius)),
           focusedBorder: UnderlineInputBorder(
             borderRadius: BorderRadius.circular(radius),
@@ -115,7 +116,6 @@ class BorderlessTextTheme extends _MaterialTextFieldTheme {
                 BorderSide(color: focusedColor ?? Colors.blue, width: width),
           ),
         );
-
 }
 
 /// This class is used for the theming of filled or outlined text field
@@ -125,7 +125,7 @@ class FilledOrOutlinedTextTheme extends _MaterialTextFieldTheme {
     TextStyle? helperStyle,
     EdgeInsetsGeometry? contentPadding,
     double radius = 4,
-    double width = 1,
+    double width = 1.5,
     Color? enabledColor,
     Color? focusedColor,
     TextStyle? labelStyle,
@@ -140,7 +140,8 @@ class FilledOrOutlinedTextTheme extends _MaterialTextFieldTheme {
     TextStyle? prefixStyle,
     TextStyle? suffixStyle,
     FloatingLabelBehavior floatingLabelBehavior = FloatingLabelBehavior.auto,
-    FloatingLabelAlignment floatingLabelAlignment = FloatingLabelAlignment.start,
+    FloatingLabelAlignment floatingLabelAlignment =
+        FloatingLabelAlignment.start,
   }) : super(
           filled: true,
           fillColor: fillColor,
