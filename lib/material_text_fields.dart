@@ -182,7 +182,7 @@ class MaterialTextField extends StatelessWidget {
         prefixText: prefixText,
         suffixStyle: theme?.suffixStyle,
         suffixText: suffixText,
-        filled: theme?.filled
+        filled: theme?.filled,
       ),
       validator: validator,
       onChanged: onChanged,
