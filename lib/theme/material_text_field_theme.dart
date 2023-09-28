@@ -14,6 +14,7 @@ abstract class _MaterialTextFieldTheme extends InputDecorationTheme {
     super.helperMaxLines,
     super.errorMaxLines,
     super.floatingLabelBehavior,
+    super.errorBorder,
     super.floatingLabelAlignment,
     super.iconColor,
     super.prefixStyle,
@@ -136,6 +137,7 @@ class FilledOrOutlinedTextTheme extends _MaterialTextFieldTheme {
     Color? suffixIconColor,
     int? helperMaxLines,
     int? errorMaxLines,
+    Color? errorBorderColor,
     Color? iconColor,
     TextStyle? prefixStyle,
     TextStyle? suffixStyle,
@@ -155,6 +157,11 @@ class FilledOrOutlinedTextTheme extends _MaterialTextFieldTheme {
           helperStyle: helperStyle,
           helperMaxLines: helperMaxLines,
           errorMaxLines: errorMaxLines,
+          errorBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(radius),
+            borderSide: BorderSide(
+                width: width, color: errorBorderColor ?? Colors.transparent),
+          ),
           floatingLabelBehavior: floatingLabelBehavior,
           floatingLabelAlignment: floatingLabelAlignment,
           iconColor: iconColor,
