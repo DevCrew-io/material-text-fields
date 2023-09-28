@@ -137,7 +137,7 @@ class FilledOrOutlinedTextTheme extends _MaterialTextFieldTheme {
     Color? suffixIconColor,
     int? helperMaxLines,
     int? errorMaxLines,
-    InputBorder? errorBorder,
+    Color? errorBorderColor,
     Color? iconColor,
     TextStyle? prefixStyle,
     TextStyle? suffixStyle,
@@ -157,7 +157,11 @@ class FilledOrOutlinedTextTheme extends _MaterialTextFieldTheme {
           helperStyle: helperStyle,
           helperMaxLines: helperMaxLines,
           errorMaxLines: errorMaxLines,
-          errorBorder: errorBorder,
+          errorBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(radius),
+            borderSide: BorderSide(
+                width: width, color: errorBorderColor ?? Colors.transparent),
+          ),
           floatingLabelBehavior: floatingLabelBehavior,
           floatingLabelAlignment: floatingLabelAlignment,
           iconColor: iconColor,
