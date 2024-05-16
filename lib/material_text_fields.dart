@@ -112,6 +112,10 @@ class MaterialTextField extends StatelessWidget {
   /// app level theming.
   final InputDecorationTheme? theme;
 
+  /// The maximum number of characters (Unicode grapheme clusters) to allow in
+  /// the text field.
+  final int? maxLength;
+
   const MaterialTextField({
     Key? key,
     this.keyboardType,
@@ -145,6 +149,7 @@ class MaterialTextField extends StatelessWidget {
     this.suffixText,
     this.labelText,
     this.theme,
+    this.maxLength,
   }) : super(key: key);
 
   @override
@@ -191,6 +196,7 @@ class MaterialTextField extends StatelessWidget {
       controller: controller,
       style: style,
       textInputAction: textInputAction,
+      maxLength: maxLength,
     );
   }
 }
