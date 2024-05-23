@@ -116,8 +116,16 @@ class MaterialTextField extends StatelessWidget {
   /// the text field.
   final int? maxLength;
 
+  /// Align text horizontally.
+  final TextAlign textAlign;
+
+  /// The vertical alignment of text within an input box.
+  final TextAlignVertical? textAlignVertical;
+
   const MaterialTextField({
     Key? key,
+    this.textAlign = TextAlign.start,
+    this.textAlignVertical,
     this.keyboardType,
     this.controller,
     this.validator,
@@ -156,6 +164,8 @@ class MaterialTextField extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextFormField(
       keyboardType: keyboardType,
+      textAlign: textAlign,
+      textAlignVertical: textAlignVertical,
       decoration: InputDecoration(
         hintText: hint,
         prefixIcon: prefixIcon,

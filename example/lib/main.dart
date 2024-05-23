@@ -56,6 +56,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   height: 16,
                 ),
                 MaterialTextField(
+                  textAlign: TextAlign.center,
                   keyboardType: TextInputType.emailAddress,
                   hint: "Email",
                   textInputAction: TextInputAction.next,
