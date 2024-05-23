@@ -1,3 +1,6 @@
+## 1.0.5
+* Add text alignment and vertical text alignment to MaterialTextField.
+
 ## 1.0.4
 * Add max length property to MaterialTextField.
 
