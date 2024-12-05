@@ -1,4 +1,7 @@
 ## 1.0.5
+* Add property for max lines and min lines
+
+## 1.0.5
 * Add text alignment and vertical text alignment to MaterialTextField.
 
 ## 1.0.4
