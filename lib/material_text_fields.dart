@@ -123,12 +123,12 @@ class MaterialTextField extends StatelessWidget {
   final TextAlignVertical? textAlignVertical;
 
   /// Max lines for the text field
-  int? maxLines = 1;
+  final int? maxLines;
 
   /// Min lines for the text field
   final int? minLines;
 
-  MaterialTextField(
+  const MaterialTextField(
       {Key? key,
       this.textAlign = TextAlign.start,
       this.textAlignVertical,

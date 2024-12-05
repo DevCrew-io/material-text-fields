@@ -1,4 +1,4 @@
-## 1.0.5
+## 1.0.6
 * Add property for max lines and min lines
 
 ## 1.0.5
