@@ -7,7 +7,7 @@ issue_tracker: https://github.com/DevCrew-io/material-text-fields/issues
 documentation: https://github.com/DevCrew-io/material-text-fields/blob/main/example/README.md
 
 environment:
-  sdk: '>=2.19.2 <3.0.0'
+  sdk: '>=2.19.2 <4.0.0'
   flutter: ">=1.17.0"
 
 dependencies:
