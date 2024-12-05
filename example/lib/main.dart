@@ -71,6 +71,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   keyboardType: TextInputType.text,
                   hint: "Full Name",
                   labelText: "Name",
+                  maxLines: 1,
                   theme: FilledOrOutlinedTextTheme(
                     enabledColor: Colors.grey,
                     focusedColor: Colors.green,

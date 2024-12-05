@@ -122,43 +122,51 @@ class MaterialTextField extends StatelessWidget {
   /// The vertical alignment of text within an input box.
   final TextAlignVertical? textAlignVertical;
 
-  const MaterialTextField({
-    Key? key,
-    this.textAlign = TextAlign.start,
-    this.textAlignVertical,
-    this.keyboardType,
-    this.controller,
-    this.validator,
-    this.textInputAction,
-    this.suffixIcon,
-    this.prefixIcon,
-    this.hint,
-    this.obscureText = false,
-    this.enabled = true,
-    this.onChanged,
-    this.style,
-    this.icon,
-    this.iconColor,
-    this.errorStyle,
-    this.errorMaxLines,
-    this.errorText,
-    this.floatingLabelAlignment,
-    this.floatingLabelBehavior,
-    this.helperMaxLines,
-    this.helperStyle,
-    this.helperText,
-    this.hintMaxLines,
-    this.hintTextDirection,
-    this.suffixIconColor,
-    this.prefixIconColor,
-    this.prefixStyle,
-    this.prefixText,
-    this.suffixStyle,
-    this.suffixText,
-    this.labelText,
-    this.theme,
-    this.maxLength,
-  }) : super(key: key);
+  /// Max lines for the text field
+  int? maxLines = 1;
+
+  /// Min lines for the text field
+  final int? minLines;
+
+  MaterialTextField(
+      {Key? key,
+      this.textAlign = TextAlign.start,
+      this.textAlignVertical,
+      this.keyboardType,
+      this.controller,
+      this.validator,
+      this.textInputAction,
+      this.suffixIcon,
+      this.prefixIcon,
+      this.hint,
+      this.obscureText = false,
+      this.enabled = true,
+      this.onChanged,
+      this.style,
+      this.icon,
+      this.iconColor,
+      this.errorStyle,
+      this.errorMaxLines,
+      this.errorText,
+      this.floatingLabelAlignment,
+      this.floatingLabelBehavior,
+      this.helperMaxLines,
+      this.helperStyle,
+      this.helperText,
+      this.hintMaxLines,
+      this.hintTextDirection,
+      this.suffixIconColor,
+      this.prefixIconColor,
+      this.prefixStyle,
+      this.prefixText,
+      this.suffixStyle,
+      this.suffixText,
+      this.labelText,
+      this.theme,
+      this.maxLength,
+      this.maxLines,
+      this.minLines})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -207,6 +215,8 @@ class MaterialTextField extends StatelessWidget {
       style: style,
       textInputAction: textInputAction,
       maxLength: maxLength,
+      maxLines: obscureText ? 1 : maxLines,
+      minLines: minLines,
     );
   }
 }
